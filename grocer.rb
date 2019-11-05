@@ -88,6 +88,10 @@ def checkout(cart, coupons)
   total = 0 
   i = 0 
   
+  while i < clearance_cart.length do
+    
+  end 
+  
   # Consult README for inputs and outputs
   #
   # This method should call

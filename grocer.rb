@@ -89,13 +89,12 @@ def checkout(cart, coupons)
   i = 0
   while i < clearance_cart.length do
     item_in_cart = clearance_cart[i]
-    price_of_item = item_in_cart[:price]
+    price_of_item = item_in_cart[:price] * item_in_cart[:count]
     total += price_of_item
     i+=1
   end
   if total > 100
     total = total - (0.10 * total)
-    return total
   end
 return total
 end

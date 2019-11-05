@@ -64,7 +64,6 @@ cart
 end
 
 def apply_clearance(cart)
-  result = []
   i = 0
   while i < array.length do
     obj= array[i]

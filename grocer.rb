@@ -82,7 +82,7 @@ def apply_clearance(cart)
 end
 
 def checkout(cart, coupons)
-  consolidated_cart = consolidate_cart(cart)
+    consolidated_cart = consolidate_cart(cart)
   couponed_cart = apply_coupons(consolidated_cart, coupons)
   clearance_cart = apply_clearance(couponed_cart)
   total = 0
@@ -90,19 +90,12 @@ def checkout(cart, coupons)
   while i < clearance_cart.length do
     item_in_cart = clearance_cart[i]
     price_of_item = item_in_cart[:price]
-
     total += price_of_item
     i+=1
   end
-  return total
-  
-  # Consult README for inputs and outputs
-  #
-  # This method should call
-  # * consolidate_cart
-  # * apply_coupons
-  # * apply_clearance
-  #
-  # BEFORE it begins the work of calculating the total (or else you might have
-  # some irritated customers
+  if total > 100
+    total = total - (0.10 * total)
+    return total
+  end
+return total
 end

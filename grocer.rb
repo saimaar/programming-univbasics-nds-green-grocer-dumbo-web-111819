@@ -95,7 +95,6 @@ def checkout(cart, coupons)
     i+=1
   end
   return total
-  end 
   
   # Consult README for inputs and outputs
   #

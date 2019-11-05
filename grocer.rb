@@ -67,7 +67,7 @@ def apply_clearance(cart)
   i = 0
   
   while i < cart.length do
-    obj= cart[i]
+    obj = cart[i]
     item_clearance = obj[:clearance]
     item_price = obj[:price]
     discount_price = item_price - (0.20 * item_price)

@@ -74,9 +74,7 @@ def apply_clearance(cart)
 
     if item_clearance == true
       obj[:price] = discount_price.round(2)
-      result.push(obj)
-    else
-      result.push(obj)
+      cart << obj
     end
 
     i+=1
